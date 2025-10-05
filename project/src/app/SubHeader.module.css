@@ -1,0 +1,43 @@
+/* SubHeader.module.css */
+
+.nav {
+  display: flex;
+  justify-content: center; /* Center the whole menu */
+  background-color: var(--secondary-color);
+  padding: 1rem 6rem;
+}
+
+.menuList {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* space between menu items */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: var(--heading-color);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menuItem:hover {
+  color: var(--primary-color);
+}
+
+.menuItem svg {
+  width: 10px;
+  height: 10px;
+  fill: var(--heading-color);
+  transition: fill 0.3s;
+}
+
+.menuItem:hover svg {
+  fill: var(--primary-color);
+}
