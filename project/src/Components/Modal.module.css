@@ -1,0 +1,125 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.2s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modalSmall {
+  width: 300px;
+}
+
+.modalMedium {
+  width: 500px;
+}
+
+.modalLarge {
+  width: 800px;
+}
+
+.hoverModal {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  white-space: normal;
+  min-width: 220px;
+  animation: fadeInUp 0.2s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.closeButton {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.contentRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.imageWrapper {
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.textWrapper {
+  flex: 2;
+}
+
+.textOnly {
+  text-align: left;
+}
+
+.imageOnly {
+  text-align: center;
+}
+
+.imageFull {
+  width: 100%;
+  border-radius: 8px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
