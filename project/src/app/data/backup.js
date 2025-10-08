@@ -1,4 +1,3 @@
-//app/data/menuItems.js
 import React from "react";
 
 export const menuItems = [
@@ -54,6 +53,51 @@ export const menuItems = [
         { name: "Seasonal Decor", description: "Festive handmade items" },
       ],
       note: "Click a category to explore unique handcrafted items for your home.",
+    },
+  },
+  {
+    name: "Products",
+    path: "/products",
+    modal: {
+      title: "Featured Products",
+      imageSrc: "/products.jpg",
+      layout: "image-left",
+      description:
+        "Check out our best-selling and featured handmade decorative products.",
+      categories: [
+        { name: "Wall Art", description: "Hand-painted murals & paintings" },
+        { name: "Vases & Planters", description: "Ceramic and wooden vases" },
+        {
+          name: "Table Decor",
+          description: "Candles, coasters, and centerpieces",
+        },
+        { name: "Lighting", description: "Artisan lamps & lanterns" },
+        { name: "Textiles", description: "Cushions, throws & rugs" },
+      ],
+      note: "Each piece is unique, handcrafted with care, and perfect for gifting or decorating.",
+    },
+  },
+  {
+    name: "Top Deals",
+    path: "/deals",
+    modal: {
+      title: "Limited-Time Offers",
+      imageSrc: "/deals.jpg",
+      layout: "image-right",
+      description:
+        "Don’t miss our exclusive limited-time offers on handmade decor.",
+      categories: [
+        { name: "Wall Art", description: "Discounted paintings & murals" },
+        {
+          name: "Vases & Planters",
+          description: "Special offers on vases & planters",
+        },
+        {
+          name: "Table Decor",
+          description: "Seasonal handmade items at reduced prices",
+        },
+      ],
+      note: "Shop now to bring unique handmade pieces into your home before these deals end!",
     },
   },
 ];

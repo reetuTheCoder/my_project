@@ -1,5 +1,7 @@
 "use client";
 
+
+// Components/Modal/Modal.js
 import React, { useEffect, useState } from "react";
 import styles from "./Modal.module.css";
 import ModalContentLayout from "./ModalContentLayout";

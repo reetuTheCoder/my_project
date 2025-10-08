@@ -1,3 +1,4 @@
+// Components/Modal/ModalContentLayout.js
 import React from "react";
 import Image from "next/image";
 import styles from "./ModalContentLayout.module.css";
