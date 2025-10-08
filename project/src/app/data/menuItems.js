@@ -11,7 +11,7 @@ export const menuItems = [
     path: "/shop",
     modal: {
       title: "Shop Handmade Decor",
-      imageSrc: "/shop-decor.jpg",
+     imageSrcs: ["/shop-decor1.jpg", "/shop-decor2.jpg", "/shop-decor3.jpg"],
       layout: "image-left",
       description:
         "Explore our curated collection of handcrafted decorative items.",

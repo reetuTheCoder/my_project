@@ -9,6 +9,7 @@ const Modal = ({
   title,
   children,
   imageSrc,
+  imageSrcs,
   layout = "text-only", // "text-only" | "image-left" | "image-right" | "image-only"
   size = "medium",
   showCloseButton = true,
@@ -62,7 +63,11 @@ const Modal = ({
         {shouldShow && (
           <div className={`${styles.hoverModal} ${modalSizeClass}`}>
             {title && <h2 className={styles.title}>{title}</h2>}
-            <ModalContentLayout layout={layout} imageSrc={imageSrc}>
+            <ModalContentLayout
+              layout={layout}
+              imageSrc={imageSrc}
+              imageSrcs={imageSrcs}
+            >
               {children}
             </ModalContentLayout>
           </div>
@@ -91,7 +96,11 @@ const Modal = ({
                 )}
               </div>
             )}
-            <ModalContentLayout layout={layout} imageSrc={imageSrc}>
+            <ModalContentLayout
+              layout={layout}
+              imageSrc={imageSrc}
+              imageSrcs={imageSrcs}
+            >
               {children}
             </ModalContentLayout>
           </div>

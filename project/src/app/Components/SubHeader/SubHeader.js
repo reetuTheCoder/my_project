@@ -16,6 +16,7 @@ const SubHeader = () => {
                 title={item.modal.title}
                 layout={item.modal.layout}
                 imageSrc={item.modal.imageSrc}
+                imageSrcs={item.modal.imageSrcs}
                 size="medium"
                 showCloseButton={false}
                 closeOnOverlayClick={false}
