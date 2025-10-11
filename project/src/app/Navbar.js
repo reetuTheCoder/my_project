@@ -4,12 +4,14 @@ import React from "react";
 import { BiCart, BiHeart, BiSearch, BiUser, BiSupport } from "react-icons/bi";
 import styles from "./Navbar.module.css";
 import { useCart } from "@/context/CartContext";
+import SubHeader from "@/Components/SubHeader/SubHeader";
 
 const Navbar = () => {
   const wishlistCount = 2; // static for now
   const { cartCount } = useCart(); // ✅ dynamic cart count
 
   return (
+    <>
     <header className={styles.header}>
       <div className={styles.contact}>
         <div>
@@ -39,6 +41,8 @@ const Navbar = () => {
         <div className={styles.iconWrapper}><BiUser size={24} /></div>
       </div>
     </header>
+    <SubHeader/>
+    </>
   );
 };
 
