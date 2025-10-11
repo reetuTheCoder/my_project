@@ -26,32 +26,7 @@ export const menuItems = [
             { name: "Tapestries", path: "tapestries" },
           ],
         },
-        {
-          name: "Vases & Planters",
-          description: "Ceramic, glass & wooden designs",
-          subroutes: [
-            { name: "Indoor", path: "indoor" },
-            { name: "Outdoor", path: "outdoor" },
-          ],
-        },
-        {
-          name: "Table Decor",
-          description: "Candles, coasters, centerpieces",
-          subroutes: [
-            { name: "Candles", path: "candles" },
-            { name: "Coasters", path: "coasters" },
-            { name: "Centerpieces", path: "centerpieces" },
-          ],
-        },
-        {
-          name: "Lighting",
-          description: "Artisan lamps & lanterns",
-          subroutes: [
-            { name: "Lamps", path: "lamps" },
-            { name: "Lanterns", path: "lanterns" },
-            { name: "Fairy Lights", path: "fairy-lights" },
-          ],
-        },
+
       ],
       note: "Every item is handmade with love to bring a personal touch to your home.",
     },
