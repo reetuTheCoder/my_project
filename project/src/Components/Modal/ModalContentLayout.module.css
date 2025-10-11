@@ -1,0 +1,39 @@
+.modalLayout {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.imageLeft {
+  flex-direction: row;
+}
+
+.imageRight {
+  flex-direction: row-reverse;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.multiImageContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  flex: 1;
+}
+
+.imageOnly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalText {
+  flex: 1;
+  padding: 1rem;
+}
