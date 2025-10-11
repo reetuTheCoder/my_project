@@ -1,5 +1,5 @@
 import React from "react";
-import SubHeader from "./Components/SubHeader/SubHeader";
+import SubHeader from "../Components/SubHeader/SubHeader";
 import { BiSearch, BiHeart, BiCart, BiUser, BiSupport } from "react-icons/bi";
 import styles from "./Navbar.module.css";
 

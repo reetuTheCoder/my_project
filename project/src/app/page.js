@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import TestModal from "./Components/Modal/TestModal";
+import TestModal from "../Components/Modal/TestModal";
 
 
 export default function Home() {
