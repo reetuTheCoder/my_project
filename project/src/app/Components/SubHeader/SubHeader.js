@@ -1,11 +1,20 @@
-// Components/SubHeader/SubHeader.js
+"use client";
+
 import React from "react";
 import styles from "./SubHeader.module.css";
 import Link from "next/link";
 import Modal from "../Modal/Modal";
 import { menuItems } from "@/app/data/menuItems";
+import { useRouter } from "next/navigation";
 
 const SubHeader = () => {
+  const router = useRouter();
+
+  const buildPath = (parentPath, names) =>
+    `${parentPath}/${names
+      .map((n) => n.toLowerCase().replace(/ /g, "-"))
+      .join("/")}`;
+
   return (
     <nav className={styles.nav}>
       <ul className={styles.menuList}>
@@ -24,6 +33,7 @@ const SubHeader = () => {
                 trigger={
                   <Link href={item.path} className={styles.menuLink}>
                     {item.name}
+                    {/* Keep the down arrow icon */}
                     <svg
                       className={styles.downArrow}
                       viewBox="0 0 10 10"
@@ -35,25 +45,47 @@ const SubHeader = () => {
                 }
               >
                 <div className={styles.modalContent}>
-                  {item.modal.description && (
-                    <p className={styles.description}>
-                      {item.modal.description}
-                    </p>
-                  )}
-
                   {item.modal.categories && (
                     <ul className={styles.categoryList}>
-                      {item.modal.categories.map((category, index) => (
+                      {item.modal.categories.map((cat, index) => (
                         <li key={index} className={styles.categoryItem}>
-                          <strong>{category.name}</strong>
-                          <span> — {category.description}</span>
+                          {/* Category name only */}
+                          <div className={styles.categoryHeader}>
+                            <span
+                              className={styles.clickable}
+                              onClick={() =>
+                                router.push(buildPath(item.path, [cat.name]))
+                              }
+                            >
+                              <strong>{cat.name}</strong>
+                            </span>
+                          </div>
+
+                          {/* Subroutes list */}
+                          {cat.subroutes?.length > 0 && (
+                            <ul className={styles.subcategoryList}>
+                              {cat.subroutes.map((sub, i) => (
+                                <li key={i}>
+                                  <span
+                                    className={styles.clickable}
+                                    onClick={() =>
+                                      router.push(
+                                        buildPath(item.path, [
+                                          cat.name,
+                                          sub.path,
+                                        ])
+                                      )
+                                    }
+                                  >
+                                    {sub.name}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </li>
                       ))}
                     </ul>
-                  )}
-
-                  {item.modal.note && (
-                    <p className={styles.note}>{item.modal.note}</p>
                   )}
                 </div>
               </Modal>

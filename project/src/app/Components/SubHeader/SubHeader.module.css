@@ -72,3 +72,22 @@
   font-style: italic;
   color: #555;
 }
+
+.categoryHeader {
+  margin-bottom: 0.25rem;
+}
+
+.subcategoryList {
+  margin-left: 1rem;
+  list-style: disc;
+}
+
+.clickable {
+  cursor: pointer;
+  color: #0070f3;
+  text-decoration: underline;
+}
+
+.clickable:hover {
+  opacity: 0.8;
+}

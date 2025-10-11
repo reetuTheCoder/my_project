@@ -1,4 +1,4 @@
-//app/data/menuItems.js
+// app/data/menuItems.js
 import React from "react";
 
 export const menuItems = [
@@ -12,48 +12,48 @@ export const menuItems = [
     path: "/shop",
     modal: {
       title: "Shop Handmade Decor",
-     imageSrcs: ["/shop-decor1.jpg", "/shop-decor2.jpg", "/shop-decor3.jpg"],
+      imageSrcs: ["/shop-decor1.jpg", "/shop-decor2.jpg", "/shop-decor3.jpg"],
       layout: "image-left",
       description:
         "Explore our curated collection of handcrafted decorative items.",
       categories: [
-        { name: "Wall Art", description: "Paintings, murals, tapestries" },
+        {
+          name: "Wall Art",
+          description: "Paintings, murals, tapestries",
+          subroutes: [
+            { name: "Paintings", path: "paintings" },
+            { name: "Murals", path: "murals" },
+            { name: "Tapestries", path: "tapestries" },
+          ],
+        },
         {
           name: "Vases & Planters",
           description: "Ceramic, glass & wooden designs",
+          subroutes: [
+            { name: "Indoor", path: "indoor" },
+            { name: "Outdoor", path: "outdoor" },
+          ],
         },
         {
           name: "Table Decor",
           description: "Candles, coasters, centerpieces",
+          subroutes: [
+            { name: "Candles", path: "candles" },
+            { name: "Coasters", path: "coasters" },
+            { name: "Centerpieces", path: "centerpieces" },
+          ],
         },
-        { name: "Lighting", description: "Artisan lamps & lanterns" },
+        {
+          name: "Lighting",
+          description: "Artisan lamps & lanterns",
+          subroutes: [
+            { name: "Lamps", path: "lamps" },
+            { name: "Lanterns", path: "lanterns" },
+            { name: "Fairy Lights", path: "fairy-lights" },
+          ],
+        },
       ],
       note: "Every item is handmade with love to bring a personal touch to your home.",
-    },
-  },
-  {
-    name: "Categories",
-    path: "/categories",
-    modal: {
-      title: "Browse Categories",
-      imageSrc: "/categories.jpg",
-      layout: "image-right",
-      description: "Discover all our handmade decorative product categories.",
-      categories: [
-        { name: "Wall Art", description: "Paintings, murals, tapestries" },
-        {
-          name: "Vases & Planters",
-          description: "Ceramic, glass & wooden designs",
-        },
-        {
-          name: "Table Decor",
-          description: "Candles, coasters, centerpieces",
-        },
-        { name: "Lighting", description: "Lamps, lanterns & fairy lights" },
-        { name: "Textiles", description: "Cushions, throws, rugs" },
-        { name: "Seasonal Decor", description: "Festive handmade items" },
-      ],
-      note: "Click a category to explore unique handcrafted items for your home.",
     },
   },
 ];
