@@ -4,19 +4,20 @@ import { subrouteContent } from "../../data/subrouteContent";
 import StarRating from "@/Components/StarRating";
 
 export default function PaintingsPage() {
- const [addedToCart, setAddedToCart] = useState({});
+  const [addedToCart, setAddedToCart] = useState({});
   const paintings = subrouteContent.Paintings;
 
   const handleAddToCart = (productId) => {
     setAddedToCart((prev) => ({ ...prev, [productId]: true }));
   };
+
+  const addedCount = Object.keys(addedToCart).length;
   return (
     <div style={{ padding: "2rem" }}>
       <h2>{paintings.title}</h2>
       <p>{paintings.description}</p>
 
-      <h3>Available Paintings:</h3>
-      <h4>Cart value: {addedToCart}</h4>
+      <h3>addedToCart value: {addedCount}</h3>
       <div
         style={{
           display: "grid",
@@ -44,9 +45,7 @@ export default function PaintingsPage() {
             <p style={{ fontSize: "0.9rem", color: "#555" }}>
               {product.description}
             </p>
-            <span style={{ color: "#f5a623", fontWeight: "bold" }}>
-              <StarRating rating={product.rating} />
-            </span>
+            <StarRating rating={product.rating} />
             <p style={{ fontWeight: "bold" }}>{product.price}</p>
 
             <div>
@@ -55,7 +54,7 @@ export default function PaintingsPage() {
                   Add to Cart
                 </button>
               ) : (
-                <button style={{ background: "#4caf50", color: "#fff" }}>
+                <button>
                   Go to Cart
                 </button>
               )}
